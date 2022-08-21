@@ -1,0 +1,14 @@
+@mixin themeButton{
+    font-family: "Montserrat";
+    height: 50px;
+    width: 200px;
+    border: 1px solid $themeColor;
+    color: $themeColor;
+    font-size: 11px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.3px;
+    display: flex;
+    
+}

@@ -1,0 +1,195 @@
+@import url("reset.css");
+@import "_mixins.scss";
+@import "_variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap');
+* {
+    box-sizing: border-box;
+}
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 30px 10% 30px 10%;
+    justify-content: space-between;
+    background-color: white;
+    .header__column{
+        font-family: "Montserrat";
+        width: 33%;
+        display: flex;
+        align-items: center;
+        h5 {
+            margin-right: 20px;
+        }
+        &:nth-child(2){
+            justify-content: center;
+            img{
+                width: 80px;
+            }
+        }
+        &:nth-child(3){
+            justify-content: flex-end;
+            img{
+                width:30px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+main{
+    padding: 150px 10% 0 10%;
+}
+.intro{
+    height: 70vh;
+    .intro__box{
+        display: flex;
+        padding-left: 10%;
+        width: 100%;
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-repeat: no-repeat;
+        align-items: center;
+        background-size: cover;
+        background-image: url("img/introimage.jpg");
+        .intro__components{
+            width: 33%;
+            .intro__components--heading{
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 60px;
+                color: rgba(0,0,0,0.7);
+                width: 80%;
+            }
+            .intro__components--subheading{
+                font-size: 13px;
+                font-family: "Montserrat";
+                color: rgba(0,0,0,0.5);
+                margin-top: 3px;
+                line-height: 1.3;
+                width: 90%;
+            }
+            .intro__components--orderbutton{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 11px;
+                margin-top: 15px;
+                width: 140px;
+                height: 40px;
+                border: 1.5px solid rgba(0,0,0,0.4);
+                font-family: "Montserrat";
+                color: $themeColor;
+                letter-spacing: 1.1px;
+            }
+        }   
+    }   
+}
+    
+
+.menu__header{
+    background-color: white;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+
+    .menu__header--texts{
+        div{
+            color: $themeColor;
+            display: flex;
+            justify-content: center;
+            &:nth-child(1){font-size: 15px;  margin-bottom:10px; font-family: "Montserrat";}
+            &:nth-child(2){font-size: 50px; font-family: 'Cormorant Garamond', serif;}     
+        }    
+    }  
+}
+
+.menu__categories{
+    display: flex;
+    height: 70vh;
+    .menu__categories--column{
+        width: 33.33%;
+        display: flex;
+        justify-content: center;
+        .menu__wrapper{
+            div{
+                display: flex;
+                justify-content: center;
+            }
+            .menu__img{
+                height: 200px;
+                align-items: center;
+                img{
+                    width: 80%;
+                }
+                margin-bottom: 30px;
+            }
+            .menu__subTitle{
+                font-family: "Montserrat";
+                margin-bottom: 3px;
+                color: $themeColor;
+                font-size: 13px;
+            }
+            .menu__title{
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 30px;
+                color: $themeColor;
+                margin-bottom: 25px;
+            }
+            .menu__btn{
+                div{
+                    @include themeButton();
+                    a{
+                        text-decoration: none;
+                    }
+                }
+                
+
+            }
+
+
+        }
+        
+    }
+}
+
+.booking-platter-signUp{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .imgbox{
+        height: 400px;
+    }
+    .textbox {
+        display: flex;
+        background-color: #e1e1e1;
+        height: 400px;
+        padding: 10%;
+        justify-content: center;
+        align-items: center;
+        h3{
+            display: flex;
+            color: rgba(0,0,0,0.6);
+            justify-content: center;
+            &:nth-child(1){font-family: "Montserrat";}
+            &:nth-child(2){
+                font-family: 'Cormorant Garamond', serif; 
+                font-size: 40px;
+                margin-bottom: 15px;
+            }
+        }
+        a{
+            @include themeButton();
+        }
+    }
+    
+    img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    
+
+}
+
